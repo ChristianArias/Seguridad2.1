@@ -1,0 +1,32 @@
+DROP VIEW vistaregistroDemos;
+CREATE VIEW vistaregistroDemos AS
+SELECT
+(SELECT seg_autosdemos.id FROM seg_autosdemos WHERE idDemo = seg_autosdemos.id) as idDemo,
+(SELECT vehiculo FROM seg_autosdemos WHERE idDemo = seg_autosdemos.id) as demo,
+(SELECT serie FROM seg_autosdemos WHERE idDemo = seg_autosdemos.id) as serie,
+(SELECT placas FROM seg_autosdemos WHERE idDemo = seg_autosdemos.id) as placas,
+(SELECT libre FROM seg_autosdemos WHERE idDemo = seg_autosdemos.id) as libre,
+registrodemos.id as Registro,
+conducido,
+activo,
+horaSalida,
+fechaSalida,
+horaLlegada,
+fechaLlegada,
+DATE_FORMAT(horaSalida,'%h:%i %p') AS salida,
+DATE_FORMAT(horaLlegada,'%h:%i %p') AS llegada,
+CONCAT(
+TIMESTAMPDIFF(DAY, concat(fechaSalida," ",horaSalida), concat(fechaLlegada," ",horaLlegada)), ' dias, ',
+MOD(TIMESTAMPDIFF(HOUR, concat(fechaSalida," ",horaSalida), concat(fechaLlegada," ",horaLlegada)), 24), ' horas y ',
+MOD(TIMESTAMPDIFF(MINUTE, concat(fechaSalida," ",horaSalida), concat(fechaLlegada," ",horaLlegada)), 60), ' minutos ') as tiempo,
+kmini,
+kmfin,
+if(kmfin=0,"En movimiento",concat((kmfin-kmini)," KM")) as km,
+creo,
+(SELECT seg_usuario.usuario FROM seg_usuario WHERE seg_usuario.id = creo) as creador,
+edito,
+(SELECT seg_usuario.usuario FROM seg_usuario WHERE seg_usuario.id = edito) as editor,
+fechaAct,
+(SELECT agencia FROM seg_autosdemos WHERE idDemo = seg_autosdemos.id) as agencia,
+(SELECT nombre FROM agencias WHERE agencia = agencias.id) as _agencia
+from registrodemos order by concat(fechaSalida," ",horaSalida) desc

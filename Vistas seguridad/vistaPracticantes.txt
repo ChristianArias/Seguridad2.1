@@ -1,0 +1,18 @@
+DROP VIEW vistapracticantes;
+CREATE VIEW vistaPracticantes AS
+select
+id,
+nombre,
+comentarios,
+foto,
+creo,
+(SELECT seg_usuario.usuario FROM seg_usuario WHERE seg_usuario.id = creo) as creador,
+edito,
+(SELECT seg_usuario.usuario FROM seg_usuario WHERE seg_usuario.id = edito) as editor,
+fechaAct,
+activo,
+agencia,
+(SELECT nombre FROM agencias WHERE agencia = agencias.id) as _agencia,
+area,
+(SELECT nombre FROM areas WHERE area = areas.id) as _area
+from seg_practicantes WHERE activo = 1;

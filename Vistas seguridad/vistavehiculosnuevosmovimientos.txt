@@ -1,0 +1,20 @@
+CREATE VIEW vistavehiculosnuevosmovimientos AS
+SELECT
+id,
+idVehiculo,
+(SELECT tipo FROM registrovehiculosnuevos WHERE registrovehiculosnuevos.id = idVehiculo) as tipo,
+(SELECT serie FROM registrovehiculosnuevos WHERE registrovehiculosnuevos.id = idVehiculo) as serie,
+km,
+kmfinal,
+destino,
+nombre,
+comentarios,
+hora,
+fecha,
+llegada,
+creo,
+(SELECT seg_usuario.usuario FROM seg_usuario WHERE seg_usuario.id = creo) as creador,
+edito,
+(SELECT seg_usuario.usuario FROM seg_usuario WHERE seg_usuario.id = edito) as editor,
+fechaAct
+FROM vehiculosnuevosmovimientos;

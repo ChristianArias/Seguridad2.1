@@ -1,0 +1,23 @@
+DROP VIEW vistaregistrovisitantes ;
+create view vistaregistrovisitantes as
+SELECT
+id,
+visitante,
+(SELECT empresa FROM seg_provedores WHERE seg_provedores.id = visitante) as empresa,
+(SELECT nombre FROM seg_provedores WHERE seg_provedores.id = visitante) as nombre,
+gafette,
+(SELECT imagen FROM seg_provedores WHERE seg_provedores.id = visitante) as imagen,
+DATE_FORMAT(horaEntrada,'%h:%i %p') AS entrada,
+DATE_FORMAT(horaSalida,'%h:%i %p') AS salida,
+departamento,
+actividad,
+fecha,
+comentarios,
+creo,
+(SELECT seg_usuario.usuario FROM seg_usuario WHERE seg_usuario.id = creo) as creador,
+edito,
+(SELECT seg_usuario.usuario FROM seg_usuario WHERE seg_usuario.id = edito) as editor,
+fechaAct,
+agencia,
+(SELECT nombre FROM agencias WHERE agencia = agencias.id) as _agencia,
+FROM registrovisitantes ORDER BY horaEntrada DESC;

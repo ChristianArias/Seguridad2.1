@@ -1,0 +1,24 @@
+DROP VIEW vistaRegistroPracticantes;
+create view vistaRegistroPracticantes as
+SELECT
+id,
+(SELECT seg_practicantes.id FROM seg_practicantes WHERE seg_practicantes.id = practicante) as idPracticante,
+(SELECT nombre FROM seg_practicantes WHERE seg_practicantes.id = practicante) as nombre,
+(SELECT foto FROM seg_practicantes WHERE seg_practicantes.id = practicante) as foto,
+fecha,
+horaEntrada,
+horaSalida,
+CONCAT(
+    MOD(TIMESTAMPDIFF(HOUR, concat(fecha," ",horaentrada), concat(date(now())," ",horaSalida)), 24), ' horas,',
+    MOD(TIMESTAMPDIFF(MINUTE, concat(fecha," ",horaentrada), concat(date(now())," ",horaSalida)), 60), ' minutos '
+)
+as tiempo,
+observaciones,
+creo,
+(SELECT seg_usuario.usuario FROM seg_usuario WHERE seg_usuario.id = creo) as creador,
+edito,
+(SELECT seg_usuario.usuario FROM seg_usuario WHERE seg_usuario.id = edito) as editor,
+fechaAct,
+agencia,
+(SELECT nombre FROM agencias WHERE agencia = agencias.id) as _agencia
+FROM registropracticantes;

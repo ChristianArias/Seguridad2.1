@@ -1,0 +1,82 @@
+
+07-08-2018 10:35:00 a.m. Unknown column 'activo' in 'where clause'
+07-08-2018 11:22:43 a.m. Column '_area' not found.
+07-08-2018 11:25:44 a.m. Invalid value for getInt() - 'Taller'
+07-08-2018 01:03:26 p.m. Column '_agencia' not found.
+07-08-2018 01:08:38 p.m. Column '_agencia' not found.
+07-08-2018 02:25:58 p.m. C:\Users\ChristianArias\Documents\NetBeansProjects\Seguridad2.1\tmp\verTMP.jpg (El sistema no puede encontrar la ruta especificada)
+07-08-2018 04:53:43 p.m. copy C:\Users\ChristianArias\Documents\NetBeansProjects\Seguridad2.1\lib\Iconos\default.jpg
+07-08-2018 04:54:33 p.m. copy C:\Users\ChristianArias\Documents\NetBeansProjects\Seguridad2.1\lib\Iconos\default.jpg
+07-08-2018 05:07:21 p.m. Unknown column '_agencia' in 'where clause'
+07-08-2018 05:09:59 p.m. Unknown column '_agencia' in 'where clause'
+07-08-2018 05:30:19 p.m. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '_agencia LIKE '%Galerias%'' at line 1
+07-08-2018 05:34:35 p.m. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '_agencia LIKE '%Galerias%'' at line 1
+07-08-2018 05:38:18 p.m. Unknown column '_agencia' in 'where clause'
+07-08-2018 05:46:13 p.m. Unknown column '_agencia' in 'where clause'
+07-08-2018 06:14:12 p.m. Column '_agencia' not found.
+07-08-2018 06:14:39 p.m. Column 'comentarios' not found.
+07-08-2018 06:21:44 p.m. Unknown column '_agencia' in 'where clause'
+07-08-2018 06:22:44 p.m. Unknown column '_agencia' in 'where clause'
+07-08-2018 06:29:20 p.m. Unknown column '_agencia' in 'where clause'
+09-08-2018 05:25:48 p.m. Field 'edito' doesn't have a default value
+09-08-2018 05:26:27 p.m. Column 'creador' not found.
+09-08-2018 05:30:58 p.m. Column 'contacto' not found.
+09-08-2018 06:04:49 p.m. Unknown column '_agencia' in 'where clause'
+10-08-2018 11:34:30 a.m. Column 'usuario' not found.
+10-08-2018 12:52:48 p.m. Column '_agencia' not found.
+10-08-2018 12:53:12 p.m. Column '_agencia' not found.
+10-08-2018 01:00:38 p.m. Unknown column 'ip' in 'field list'
+10-08-2018 06:34:15 p.m. C:\Users\ChristianArias\desktop\Registro de personal limpieza Milenio Motors.xlsx (El proceso no tiene acceso al archivo porque está siendo utilizado por otro proceso)
+11-08-2018 11:15:33 a.m. Field 'edito' doesn't have a default value
+11-08-2018 11:45:52 a.m. Column 'empresa' not found.
+11-08-2018 11:57:45 a.m. Data truncation: Incorrect time value: '' for column 'horaSalida' at row 1
+11-08-2018 12:02:50 p.m. Column 'limpieza' not found.
+15-08-2018 10:11:31 a.m. Se creo la carpeta H:Limpieza\
+15-08-2018 10:11:31 a.m. Se creo la carpeta H:\Practicantes\
+15-08-2018 10:11:31 a.m. Se creo la carpeta H:\visitantes\
+15-08-2018 10:11:31 a.m. Se creo la carpeta H:\vehiculosdemo\
+15-08-2018 10:11:32 a.m. Se creo la carpeta H:\lavado\ 
+15-08-2018 11:26:44 a.m. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'froma gencias' at line 1
+15-08-2018 12:16:59 p.m. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+15-08-2018 12:16:59 p.m. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+15-08-2018 12:17:00 p.m. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+15-08-2018 12:17:00 p.m. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+15-08-2018 12:17:00 p.m. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+15-08-2018 12:17:00 p.m. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+15-08-2018 12:24:32 p.m. Table 'seguridad.vistaregistrovisitantesa' doesn't exist
+15-08-2018 12:24:34 p.m. Table 'seguridad.vistaregistrovisitantesa' doesn't exist
+15-08-2018 12:24:34 p.m. Table 'seguridad.vistaregistrovisitantesa' doesn't exist
+15-08-2018 12:24:34 p.m. Table 'seguridad.vistaregistrovisitantesa' doesn't exist
+15-08-2018 12:25:37 p.m. Table 'seguridad.vistavehiculosnuevosmovimientosa' doesn't exist
+15-08-2018 12:25:39 p.m. Table 'seguridad.vistavehiculosnuevosmovimientosa' doesn't exist
+15-08-2018 12:25:40 p.m. Table 'seguridad.vistavehiculosnuevosmovimientosa' doesn't exist
+15-08-2018 01:07:29 p.m. Table 'seguridad.vistaregistrovehiculosvistalavado' doesn't exist
+15-08-2018 01:29:17 p.m. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'registropracticantes' at line 1
+15-08-2018 01:30:04 p.m. Can not issue data manipulation statements with executeQuery().
+15-08-2018 01:32:34 p.m. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+15-08-2018 01:59:00 p.m. Se creo la carpeta H:Limpieza\
+15-08-2018 01:59:00 p.m. Se creo la carpeta H:\Practicantes\
+15-08-2018 01:59:00 p.m. Se creo la carpeta H:\visitantes\
+15-08-2018 01:59:00 p.m. Se creo la carpeta H:\vehiculosdemo\
+15-08-2018 01:59:00 p.m. Se creo la carpeta H:\lavado\ 
+15-08-2018 02:36:21 p.m. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and departamento = 1 group by fechaentrada' at line 1
+15-08-2018 05:23:21 p.m. Se creo la carpeta H:Limpieza\
+15-08-2018 05:23:21 p.m. Se creo la carpeta H:\Practicantes\
+15-08-2018 05:23:21 p.m. Se creo la carpeta H:\visitantes\
+15-08-2018 05:23:21 p.m. Se creo la carpeta H:\vehiculosdemo\
+15-08-2018 05:23:21 p.m. Se creo la carpeta H:\lavado\ 
+15-08-2018 06:51:28 p.m. Se creo la carpeta H:Limpieza\
+15-08-2018 06:51:28 p.m. Se creo la carpeta H:\Practicantes\
+15-08-2018 06:51:28 p.m. Se creo la carpeta H:\visitantes\
+15-08-2018 06:51:28 p.m. Se creo la carpeta H:\vehiculosdemo\
+15-08-2018 06:51:28 p.m. Se creo la carpeta H:\lavado\ 
+16-08-2018 05:11:03 p.m. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'seg_usuarioSELECT * FROM' at line 1
+25-08-2018 12:07:47 p.m. Unknown column 'comentarios' in 'field list'
+25-08-2018 12:47:46 p.m. Column 'creador' not found.
+26-08-2018 12:54:21 a.m. Column 'ultimaip' not found.
+26-08-2018 01:58:40 p.m. Table 'seguridad.vistaregistrovisitantesvistademos' doesn't exist
+26-08-2018 03:23:25 p.m. Unknown column 'activo' in 'where clause'
+26-08-2018 03:35:13 p.m. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+26-08-2018 04:00:08 p.m. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'vistaregistrovehiculosnuevosSELECT * FROM' at line 1
+26-08-2018 04:00:19 p.m. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'vistaregistrovehiculosinactivosSELECT * FROM' at line 1
+31-08-2018 11:59:20 a.m. You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '38' at line 1

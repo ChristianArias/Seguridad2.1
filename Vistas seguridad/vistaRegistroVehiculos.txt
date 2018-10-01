@@ -1,0 +1,32 @@
+drop view vistaregistrovehiculos;
+create view vistaregistrovehiculos as 
+select 
+id,
+placas,
+torre,
+color,
+orden,
+folio,
+asesor,
+vehiculo,
+comentarios,
+colorVehiculo,
+fechaEntrada,
+horaEntrada,
+fechaSalida,
+horaSalida,
+CONCAT(
+TIMESTAMPDIFF(DAY, concat(fechaEntrada," ",horaentrada), concat(fechaSalida," ",horaSalida)), ' dias, ',
+MOD(TIMESTAMPDIFF(HOUR, concat(fechaEntrada," ",horaentrada), concat(fechaSalida," ",horaSalida)), 24), ' horas y ',
+MOD(TIMESTAMPDIFF(MINUTE, concat(fechaEntrada," ",horaentrada), concat(fechaSalida," ",horaSalida)), 60), ' minutos ') as tiempo,
+creo,
+(SELECT seg_usuario.usuario FROM seg_usuario WHERE seg_usuario.id = creo) as creador,
+edito,
+(SELECT seg_usuario.usuario FROM seg_usuario WHERE seg_usuario.id = edito) as editor,
+fechaAct,
+agencia,
+(SELECT nombre FROM agencias WHERE agencia = agencias.id) as _agencia,
+departamento,
+(SELECT nombre FROM departamento WHERE departamento = departamento.id) as _departamento,
+fin
+FROM registrovehiculos order by concat(fechaEntrada," ",horaEntrada) desc;

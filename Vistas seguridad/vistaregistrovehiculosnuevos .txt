@@ -1,0 +1,22 @@
+CREATE VIEW vistaregistrovehiculosnuevos AS
+SELECT
+id as vehiculo,
+nombre,
+destino as origen,
+tipo,
+modelo,
+color,
+serie,
+kmini,
+(SELECT km FROM vehiculosnuevosmovimientos WHERE idVehiculo = vehiculo ORDER BY km desc LIMIT 1) as kminicial,
+(SELECT kmfinal FROM vehiculosnuevosmovimientos WHERE idVehiculo = vehiculo ORDER BY km desc LIMIT 1) as kmfin,
+(SELECT destino FROM vehiculosnuevosmovimientos WHERE idVehiculo = vehiculo ORDER BY concat(fecha,' ',hora) desc LIMIT 1) as destino,
+comentarios,
+fechaEntrada,
+horaEntrada,
+creo,
+(SELECT seg_usuario.usuario FROM seg_usuario WHERE seg_usuario.id = creo) as creador,
+edito,
+(SELECT seg_usuario.usuario FROM seg_usuario WHERE seg_usuario.id = edito) as editor,
+fechaAct
+FROM registrovehiculosnuevos;

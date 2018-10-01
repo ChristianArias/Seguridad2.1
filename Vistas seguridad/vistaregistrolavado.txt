@@ -1,0 +1,25 @@
+DROP VIEW vistaregistrolavado;
+CREATE VIEW vistaregistrolavado as
+SELECT
+id,
+lavado,
+(SELECT nombre FROM seg_lavado WHERE seg_lavado.id = lavado) as nombre,
+(SELECT empresa FROM seg_lavado WHERE seg_lavado.id = lavado) as foto,
+(SELECT foto FROM seg_lavado WHERE seg_lavado.id = lavado) as foto,
+fecha,
+horaEntrada,
+horaSalida,
+CONCAT(
+    MOD(TIMESTAMPDIFF(HOUR, concat(fecha," ",horaentrada), concat(date(now())," ",horaSalida)), 24), ' horas,',
+    MOD(TIMESTAMPDIFF(MINUTE, concat(fecha," ",horaentrada), concat(date(now())," ",horaSalida)), 60), ' minutos '
+)
+as tiempo,
+comentarios,
+creo,
+(SELECT seg_usuario.usuario FROM seg_usuario WHERE seg_usuario.id = creo) as creador,
+edito,
+(SELECT seg_usuario.usuario FROM seg_usuario WHERE seg_usuario.id = edito) as editor,
+fechaAct,
+agencia,
+(SELECT nombre FROM agencias WHERE agencia = agencias.id) as _agencia
+FROM registrolavado;

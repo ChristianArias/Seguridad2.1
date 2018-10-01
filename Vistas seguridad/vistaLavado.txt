@@ -1,0 +1,17 @@
+drop view vistaLavado;
+create view vistaLavado as
+select
+seg_lavado.id,
+nombre,
+empresa,
+comentarios,
+foto,
+creo,
+(SELECT seg_usuario.usuario FROM seg_usuario WHERE seg_usuario.id = creo) as creador,
+edito,
+(SELECT seg_usuario.usuario FROM seg_usuario WHERE seg_usuario.id = edito) as editor,
+fechaAct,
+activo,
+agencia,
+(SELECT nombre FROM agencias WHERE agencia = agencias.id) as _agencia
+from seg_lavado WHERE activo = 1;

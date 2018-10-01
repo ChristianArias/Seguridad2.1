@@ -1,0 +1,24 @@
+DROP VIEW vistaregistrolimpieza ;
+CREATE VIEW vistaregistrolimpieza AS
+SELECT
+id,
+limpieza,
+(SELECT nombre FROM seg_limpieza WHERE seg_limpieza.id = limpieza) as nombre,
+(SELECT foto FROM seg_limpieza WHERE seg_limpieza.id = limpieza) as foto,
+fecha,
+horaEntrada,
+horaSalida,
+CONCAT(
+    MOD(TIMESTAMPDIFF(HOUR, concat(fecha," ",horaentrada), concat(date(now())," ",horaSalida)), 24), ' horas,',
+    MOD(TIMESTAMPDIFF(MINUTE, concat(fecha," ",horaentrada), concat(date(now())," ",horaSalida)), 60), ' minutos '
+)
+as tiempo,
+comentarios,
+creo,
+(SELECT seg_usuario.usuario FROM seg_usuario WHERE seg_usuario.id = creo) as creador,
+edito,
+(SELECT seg_usuario.usuario FROM seg_usuario WHERE seg_usuario.id = edito) as editor,
+fechaAct,
+agencia,
+(SELECT nombre FROM agencias WHERE agencia = agencias.id) as _agencia
+FROM registrolimpieza;

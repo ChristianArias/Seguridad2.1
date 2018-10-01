@@ -1,0 +1,19 @@
+drop view vistademos;
+create view vistademos as
+select
+seg_autosdemos.id,
+vehiculo,
+color,
+serie,
+placas,
+observaciones,
+creo,
+(SELECT seg_usuario.usuario FROM seg_usuario WHERE seg_usuario.id = creo) as creador,
+edito,
+(SELECT seg_usuario.usuario FROM seg_usuario WHERE seg_usuario.id = edito) as editor,
+actualizo,
+libre,
+agencia,
+(SELECT nombre FROM agencias WHERE agencia = agencias.id) as _agencia,
+activo
+from seg_autosdemos WHERE activo = 1;

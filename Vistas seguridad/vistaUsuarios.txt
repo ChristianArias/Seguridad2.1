@@ -1,0 +1,14 @@
+CREATE VIEW vistausuarios AS
+SELECT
+id,
+nombre,
+usuario,
+contrasena,
+activo,
+comentarios,
+administrador,
+enUso,
+ip,
+agencia,
+(SELECT nombre FROM agencias WHERE agencia = agencias.id) as _agencia
+FROM `seguridad`.`seg_usuario`;

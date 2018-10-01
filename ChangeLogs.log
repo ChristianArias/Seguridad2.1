@@ -1,0 +1,6 @@
+2.1
+- Opcion de borra (Solo deshabilita,no desaparece de la base de datos.
+- Cambia donde se almacenan las imagenes,de Base de datos a Carpeta en servidor.
+- Depuracion de codigo.
+2.0
+- Reduccion de imagenes al almacenar en Base de datos.
